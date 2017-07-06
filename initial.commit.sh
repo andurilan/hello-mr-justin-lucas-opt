@@ -9,8 +9,11 @@ git clone --no-checkout https://github.com/andurilan/hello-mr-justin-lucas.git /
 mv /git.tmp/.git /
 
 # Delete the temporary directory
-rmdir /git.tmp
-cd /
+directory_remove.sh /git.tmp
+
+# To Operator
+cd /opt
+ls /opt/initial
 
 # git thinks all files are deleted, this reverts the state of the repo to HEAD.
 # WARNING: any local changes to the files will be lost.
