@@ -1,9 +1,7 @@
 # Clone just the repository's .git folder (excluding files as they are already in
 # `existing-dir`) into an empty temporary directory
-if [ -d "/git.tmp" ] 
-then
-    rm -rf /git.tmp
-fi
+mkdir /git.tmp || true
+rmdir /git.tmp
 
 git clone --no-checkout https://github.com/andurilan/hello-mr-justin-lucas.git /git.tmp # might want --no-hardlinks for cloning local repo
 
